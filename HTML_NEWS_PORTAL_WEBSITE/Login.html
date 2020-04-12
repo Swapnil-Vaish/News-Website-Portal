@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<HTML> 
+	<HEAD>
+		<META CHARSET="UTF-8">
+		<TITLE>BUZZ INTERNATIONAL NEWS</TITLE>
+		<script>
+		function navover(index)
+		{
+			var navi=document.getElementById("nav"+index);
+			var anc=document.getElementById("a"+index);
+			anc.style.color="#ffffff";
+			navi.style.border="5px solid black";
+		}
+		function navout(index)
+		{
+			var navi=document.getElementById("nav"+index);
+			var anc=document.getElementById("a"+index);
+			anc.style.color="#222f33";
+			navi.style.border="0px solid black";
+		}
+		function vale()
+		{
+			var email=document.getElementById("idem");
+			var pass=document.getElementById("idpa");
+			if(email.value=="")
+			{
+				document.getElementById("idem1").style.visibility="visible";
+				alert("Please enter valid EMAIL !!!");
+			}
+			else if(pass.value=="")
+			{	
+				alert("Please enter PASSWORD !!!");
+				document.getElementById("idem1").style.visibility="hidden";
+				document.getElementById("idpa1").style.visibility="visible";
+			}
+			else
+			{
+				alert("Authentication Verified");
+				document.getElementById("idem1").style.visibility="hidden";
+				document.getElementById("idpa1").style.visibility="hidden";
+			}
+		}
+		function val2()
+		{
+			var email=document.getElementById("idema");
+			var pass=document.getElementById("idpas");
+			var name=document.getElementById("idnm");
+			if(name.value=="")
+			{
+				document.getElementById("idnm1").style.visibility="visible";
+				alert("Please enter valid Name !!!");
+			}
+			else if(email.value=="")
+			{
+				document.getElementById("idnm1").style.visibility="hidden";
+				document.getElementById("idem2").style.visibility="visible";
+				alert("Please enter valid EMAIL !!!");
+			}
+			else if(pass.value=="")
+			{	
+				alert("Please enter PASSWORD !!!");
+				document.getElementById("idem2").style.visibility="hidden";
+				document.getElementById("idpa2").style.visibility="visible";
+			}
+			else
+			{
+				alert("Successful Registration !!!");
+				document.getElementById("idem2").style.visibility="hidden";
+				document.getElementById("idpa2").style.visibility="hidden";
+				document.getElementById("idnm1").style.visibility="hidden";
+			}
+		}
+		</script>
+	</HEAD>
+	<BODY bgcolor="#faeded">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" >
+			<tr>
+				<td width="10%" height="130" style="padding-bottom:2px"><img src="images\Buzz_logo.png" height="150"/></td>
+				<td width="90%" height="130" style="padding-bottom:2px; color:#a61927;" bgcolor="#222f33" align="middle"><h1><big>BUZZ INTERNATIONAL NEWS</big> </h1></td>
+			</tr>
+			<tr>
+				<table width="100%" height="10px" border="0" cellpadding="0">
+				<tr>
+				<td id="nav1" onmouseover="navover(1)" onmouseout="navout(1)" align="middle"  valign="top"  style=" background-color:#a61927;"><h2><a href="Home.html" style="color:#222f33;" id="a1" >HOME</H2></TD>
+				<td  id="nav2" onmouseover="navover(2)" onmouseout="navout(2)" align="middle"  valign="top"  style=" color:#222f33;" bgcolor="#a61927"><h2><a href="Home.html"  style="color:#222f33;" id="a2">CORONAVIRUS</H2></TD>
+				<td  id="nav3" onmouseover="navover(3)" onmouseout="navout(3)"align="middle" valign="top"  style=" color:#222f33;" bgcolor="#a61927"><h2><a href="Home.html" style="color:#222f33;" id="a3">INTERNATIONAL VIEWS</H2></TD>
+				<td  id="nav4" onmouseover="navover(4)" onmouseout="navout(4)"align="middle" valign="top"  style=" color:#222f33;" bgcolor="#a61927"><h2><a href="Featured.html" style="color:#222f33;" id="a4">FEATURED NEWS</H2></TD>
+				<td id="nav5" onmouseover="navover(5)" onmouseout="navout(5)" align="middle" valign="top"  style=" color:#222f33;" bgcolor="#a61927"><h2><a href="#about" style="color:#222f33;" id="a5">ABOUT</H2></TD>
+				<td id="nav6" onmouseover="navover(6)" onmouseout="navout(6)" align="middle" valign="top"  style=" color:#222f33;" bgcolor="#a61927"><h2><a href="#" style="color:#222f33;" id="a6">SIGN UP/LOG IN</H2></TD>
+				</tr>
+				</table>
+			</tr>
+			<tr>
+				<td>
+				<table width="100%">
+				<tr>
+				<td width="100%" height="100" bgcolor="#0d2b2d" align="middle" valign="middle" style="color:#ffffff">
+				<h1><b>TYPOGRAPHY</b></h1>
+				</td>
+				</tr>
+				</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<table width="100%" cellspacing="5">
+					<tr>
+					<td width="100%" height="30" bgcolor="#0d2b2d" align="middle" valign="middle" style="color:#ffffff">
+					<b>LOG IN</b>
+					</td>
+					</tr>
+					<tr>
+					<td width="50%" bgcolor="#ffffff" style="color:#0d2b2d; border:2px solid black; border-color:#0d2b2d; font-size:20px ">
+					<FORM>
+						<LABEL NAME="EMAIL">Email:
+						</LABEL>
+						<INPUT id="idem" TYPE="Email" NAME="EMAIL" PLACEHOLDER="Enter your Email" size="100%" style="border:2px solid black; border-color:#0d2b2d; ">
+						<label id="idem1" name="Invalid" style="border:1px solid red; color:red; visibility:hidden;">INVALID INPUT </label><BR>
+						<LABEL NAME="PASSWORD">Password:</LABEL>
+						<INPUT id="idpa" TYPE="Password" NAME="PASSWORD" size="100%" PLACEHOLDER="Enter your Password" style="border:2px solid black; border-color:#0d2b2d; ">
+						<label id="idpa1" name="Invalid" style="border:1px solid red; color:red; visibility:hidden;">INVALID INPUT </label><BR>
+						<button type="button" onclick="vale()" style="border:2px solid black; border-color:#0d2b2d;">SUBMIT TO LOG IN </button>
+					</FORM>
+					</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<table width="100%" cellspacing="5">
+					<tr>
+					<td width="100%" height="30" bgcolor="#0d2b2d" align="middle" valign="middle" style="color:#ffffff">
+					<b>SIGN UP</b>
+					</td>
+					</tr>
+					<tr>
+					<td width="50%" bgcolor="#ffffff" style="color:#0d2b2d; border:2px solid black; border-color:#0d2b2d; font-size:20px ">
+					<FORM>
+						<LABEL NAME="NAME">Name:</LABEL>
+						<INPUT id="idnm" TYPE="Text" NAME="NAME" SIZE="100%" PLACEHOLDER="Enter your Name" style="border:2px solid black; border-color:#0d2b2d; ">
+						<label id="idnm1" name="Invalid" style="border:1px solid red; color:red; visibility:hidden;">INVALID INPUT </label><BR>
+						<LABEL NAME="EMAIL">Email:
+						</LABEL>
+						<INPUT id="idema" TYPE="Email" NAME="EMAIL" PLACEHOLDER="Enter your Email" size="100%" style="border:2px solid black; border-color:#0d2b2d; ">
+						<label id="idem2" name="Invalid" style="border:1px solid red; color:red; visibility:hidden;">INVALID INPUT </label><BR>
+						<LABEL NAME="PASSWORD">Password:</LABEL>
+						<INPUT id="idpas" TYPE="Password" NAME="PASSWORD" size="100%" PLACEHOLDER="Enter your Password" style="border:2px solid black; border-color:#0d2b2d; ">
+						<label id="idpa2" name="Invalid" style="border:1px solid red; color:red; visibility:hidden;">INVALID INPUT </label><BR>
+						<LABEL NAME="GENDER">Gender:</LABEL>
+						<INPUT TYPE="Radio" NAME="GENDER" CHECKED>MALE</INPUT>
+						<INPUT TYPE="Radio" NAME="GENDER" >FEMALE</INPUT>
+						<INPUT TYPE="Radio" NAME="GENDER" >OTHERS</INPUT><BR>
+						<LABEL NAME="INTEREST">Interest:</LABEL>
+						<INPUT TYPE="Checkbox" NAME="INTEREST" CHECKED>TECHNICAL NEWS</INPUT>
+						<INPUT TYPE="Checkbox" NAME="INTEREST" >SPORTS NEWS</INPUT>
+						<INPUT TYPE="Checkbox" NAME="INTEREST" >TRENDING NEWS</INPUT><br>
+						<button type="button" onclick="val2()" style="border:2px solid black; border-color:#0d2b2d;">SUBMIT TO SIGN UP </button>
+					</FORM>
+					</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		<table width="100%" border="5" cellpadding="2" cellspacing="20" bgcolor="#222f33" style="color:#ffffff; border-color:#ffffff;">
+			<tr>
+				<td id="about" width="33%" height="60" align="middle" valign="top" style="color:#ffffff"><b><h2>ABOUT US</h2></b></td>
+				<td width="34%" height="60" align="middle" valign="top" style="color:#ffffff"><b><h2>CONTACT US</h2></b></td>
+				<td width="33%" height="60" align="middle" valign="top" style="color:#ffffff"><b><h2>FOLLOW US</h2></b></td>
+			</tr>
+			<tr>
+				<td width="33%" align="middle" valign="top" style="color:#ffffff">Buzz International News is a syndicated news and opinion website providing continuously updated headlines to top news and analysis sources. It is a leading source of global news and information for more than 75 years. Go to Buzzinternationalnews.com for breaking news, videos, and the latest top stories in world news, business, politics, health and pop culture. It has been a staple of Indian media for over 80 years, bringing high-quality journalism to millions of readers around the globe. </td>
+				<td width="34%" align="middle" valign="top" style="color:#ffffff">
+				<img width="30" src="images\con6.jpg"> HEADQUATERS : <br>123A-BLOCK 6,BARIELLY ,UTTAR PRADESH <br>
+				<img width="30" src="images\con2.png"> CONTACT ON : <br>91-12345678, 91-87654321 <br>
+				<img width="30" src="images\con3.png"> EMAIL ON : <br>buzzinternationalnews@gmail.com <br>
+				<img width="30" src="images\con4.png"> NEWS ON : <br>buzzinternationalnews.com <br>
+				</td>
+				<td width="33%" align="middle" valign="top" style="color:#ffffff">
+				<img width="30" src="images\fol1.png"> FACEBOOK LINK : <br>facebook.com\buzzinternationalnews <br>
+				<img width="30" src="images\fol2.png"> TWITTER LINK : <br>twitter.com\buzzinternationalnews <br>
+				<img width="30" src="images\fol3.png"> YOUTUBE LINK : <br>youtube.com\buzzinternationalnews <br>
+				<img width="30" src="images\fol4.png"> TELLEGRAM LINK : <br>tellegram.com\buzzinternationalnews <br>
+				</td>
+			</tr>	
+		</table>
+	</body>
+</html>
+ 
